@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">BlackQuant</h1>
+    <p class="lead">Action plan to achieve your dream</p>
+    <hr class="my-4">
+    <p>Let's get started</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{{ url_for('users.register_user') }}" role="button">Sign up</a>
+    </p>
+</div>
+
+{% endblock %}

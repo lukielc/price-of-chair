@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Create Store</h1>
+</div>
+<div class="form-size">
+    <form method="post">
+        <div class="form-group">
+            <label for="name">Store Name</label>
+            <input type="text" , class="form-control" id="name" name="name" placeholder="Store Name">
+        </div>
+        <div class="form-group">
+            <label for="url_prefix">Store URL Prefix</label>
+            <input type="text" , class="form-control" id="url_prefix" name="url_prefix" placeholder="http://..."
+                   aria-describedby="storeURLPrefixHelp">
+            <span id="storeURLPrefixHelp" class="help-block">Start of URL</span>
+        </div>
+        <div class="form-group">
+            <label for="tag_name">Tag Name</label>
+            <input type="text" , class="form-control" id="tag_name" name="tag_name" placeholder="span" value="span"
+                   aria-describedby="storeTagNameHelp">
+            <span id="storeTagNameHelp" class="help-block">Tag Name (usually <code>span</code>)</span>
+        </div>
+        <div class="form-group">
+            <label for="query">Search Query</label>
+            <input type="text" , class="form-control" id="query" name="query" placeholder='{"id": "price-now"}' value='{"id": "price-now"}' aria-describedby="queryHelp">
+            <span id="queryHelp" class="help-block">JSON query that find the HTML tag with item price</span>
+        </div>
+        <button type="submit" class="btn btn-success">Create</button>
+    </form>
+</div>
+{% endblock %}

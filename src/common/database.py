@@ -1,7 +1,5 @@
 import pymongo
 
-__author__ = 'jslvtr'
-
 
 class Database(object):
     URI = "mongodb://127.0.0.1:27017"
@@ -30,4 +28,4 @@ class Database(object):
 
     @staticmethod
     def remove(collection, query):
-        return Database.DATABASE[collection].remove(query)
+        Database.DATABASE[collection].remove(query)
